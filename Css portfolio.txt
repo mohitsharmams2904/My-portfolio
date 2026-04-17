@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0d0d1a;
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #1a1a2e;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: #a855f7;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #1a1a2e, #4c1d95);
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero h2 {
+  color: #a855f7;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #a855f7;
+  border: none;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Sections */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #1f1f3a;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card i {
+  font-size: 2rem;
+  color: #a855f7;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1a1a2e;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #1a1a2e;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
